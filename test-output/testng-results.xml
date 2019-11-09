@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25656" started-at="2019-11-06T19:23:20Z" finished-at="2019-11-06T19:23:46Z">
+  <suite name="Default suite" duration-ms="52474" started-at="2019-11-09T12:09:08Z" finished-at="2019-11-09T12:10:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25656" started-at="2019-11-06T19:23:20Z" finished-at="2019-11-06T19:23:46Z">
-      <class name="com.qa.hubspot.Tests.LoginpageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.hubspot.Tests.LoginpageTest@26653222]" name="setup" is-config="true" duration-ms="21100" started-at="2019-11-06T19:23:20Z" finished-at="2019-11-06T19:23:41Z">
+    <test name="Default test" duration-ms="52474" started-at="2019-11-09T12:09:08Z" finished-at="2019-11-09T12:10:01Z">
+      <class name="com.qa.hubspot.Tests.ContactspageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.hubspot.Tests.ContactspageTest@26653222]" name="setup" is-config="true" duration-ms="33204" started-at="2019-11-09T12:09:08Z" finished-at="2019-11-09T12:09:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="doLoginTest()[pri:0, instance:com.qa.hubspot.Tests.LoginpageTest@26653222]" name="doLoginTest" duration-ms="3502" started-at="2019-11-06T19:23:41Z" finished-at="2019-11-06T19:23:44Z">
+        <test-method status="PASS" signature="verifyContactspageTitleTest()[pri:1, instance:com.qa.hubspot.Tests.ContactspageTest@26653222]" name="verifyContactspageTitleTest" duration-ms="4024" started-at="2019-11-09T12:09:41Z" finished-at="2019-11-09T12:09:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLoginTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.hubspot.Tests.LoginpageTest@26653222]" name="teardown" is-config="true" duration-ms="1018" started-at="2019-11-06T19:23:44Z" finished-at="2019-11-06T19:23:46Z">
+        </test-method> <!-- verifyContactspageTitleTest -->
+        <test-method status="PASS" signature="createContactsTest()[pri:2, instance:com.qa.hubspot.Tests.ContactspageTest@26653222]" name="createContactsTest" duration-ms="14086" started-at="2019-11-09T12:09:45Z" finished-at="2019-11-09T12:09:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactsTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.hubspot.Tests.ContactspageTest@26653222]" name="teardown" is-config="true" duration-ms="1124" started-at="2019-11-09T12:09:59Z" finished-at="2019-11-09T12:10:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.qa.hubspot.Tests.LoginpageTest -->
+      </class> <!-- com.qa.hubspot.Tests.ContactspageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

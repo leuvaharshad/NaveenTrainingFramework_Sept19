@@ -27,10 +27,13 @@ public class Loginpage extends Basepage {
 		return title;
 	}
 	
-	public void dologin(String username,String pwd) {
+	public Homepage dologin(String username,String pwd) throws InterruptedException {
 		driver.findElement(email).sendKeys(username);
 		driver.findElement(password).sendKeys(pwd);
 		driver.findElement(loginbtn).click();
+		Thread.sleep(5000);
+		return new Homepage(driver);
+		
 	}
 	
 

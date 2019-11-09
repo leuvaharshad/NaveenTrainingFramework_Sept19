@@ -21,11 +21,13 @@ public class Basepage {
 	 * 
 	 * @param browsername
 	 * @return driver
+	 * @throws InterruptedException 
 	 */
 
-	public WebDriver init_driver(String browsername) {
+	public WebDriver init_driver(String browsername) throws InterruptedException {
 		if (browsername.equals("Chrome")) {
 			WebDriverManager.chromedriver().setup();
+			Thread.sleep(5000);
 			driver = new ChromeDriver();
 		} else if (browsername.equals("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
