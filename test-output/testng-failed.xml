@@ -5,7 +5,7 @@
     <classes>
       <class name="com.qa.hubspot.Tests.ContactspageTest">
         <methods>
-          <include name="createContactsTest"/>
+          <include name="createContactsTest" invocation-numbers="0 1"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>

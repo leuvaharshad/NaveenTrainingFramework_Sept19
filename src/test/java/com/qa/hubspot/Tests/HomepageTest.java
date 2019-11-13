@@ -11,15 +11,16 @@ import org.testng.annotations.Test;
 import com.qa.hubspot.base.Basepage;
 import com.qa.hubspot.pages.Homepage;
 import com.qa.hubspot.pages.Loginpage;
+import com.qa.hubspot.utils.Constants;
 
 public class HomepageTest {
-	
+
 	WebDriver driver;
 	Basepage basepage;
 	Properties prop;
 	Loginpage loginpage;
 	Homepage homepage;
-	
+
 	@BeforeTest
 	public void setup() throws InterruptedException {
 		basepage = new Basepage();
@@ -29,42 +30,35 @@ public class HomepageTest {
 		driver.get(prop.getProperty("url"));
 		Thread.sleep(5000);
 		loginpage = new Loginpage(driver);
-		
-		try {
-			homepage=loginpage.dologin(prop.getProperty("user"), prop.getProperty("password"));
-		} catch (InterruptedException e) {
-			System.out.println("issue in login");
-			e.printStackTrace();
-		}
-		
+		homepage = loginpage.dologin(prop.getProperty("user"), prop.getProperty("password"));
+
 	}
-	
-	@Test(priority=1)
+
+	@Test(priority = 1)
 	public void verifyHomepageTitleTest() {
-		String title=homepage.verifyHomepageTitle();
-		Assert.assertEquals(title, "Account Setup | HubSpot","Homepage title notmaching");
+		String title = homepage.verifyHomepageTitle();
+		Assert.assertEquals(title, Constants.Homepage_Title, "Homepage title not maching");
 	}
-	
-	@Test(priority=2)
+
+	@Test(priority = 2)
 	public void verifyAccountNameTitleTest() throws InterruptedException {
-		String accountname=homepage.verifyAccountname();
-		System.out.println("Account user name is "+accountname);
-		
+
+		String accountname = homepage.verifyAccountname();
+		System.out.println("Account user name is " + accountname);
+		Assert.assertEquals(accountname, Constants.Homepage_AccountName, "Home page Account name is not matched");
+
 	}
-	
-	@Test(priority=3)
-	public void  gotoContactspageTest() throws InterruptedException {
+
+	@Test(priority = 3)
+	public void gotoContactspageTest() throws InterruptedException {
 		homepage.gotoContactspage();
 		System.out.println("Welcome to Contacts page");
-		
+
 	}
-	
+
 	@AfterTest
 	public void tearDown() {
 		driver.quit();
 	}
-	
-	
-	
 
 }

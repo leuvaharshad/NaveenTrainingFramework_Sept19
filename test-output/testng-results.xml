@@ -1,25 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="2" ignored="0" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52474" started-at="2019-11-09T12:09:08Z" finished-at="2019-11-09T12:10:01Z">
+  <suite name="Default suite" duration-ms="85778" started-at="2019-11-13T13:28:23Z" finished-at="2019-11-13T13:29:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52474" started-at="2019-11-09T12:09:08Z" finished-at="2019-11-09T12:10:01Z">
+    <test name="Default test" duration-ms="85778" started-at="2019-11-13T13:28:23Z" finished-at="2019-11-13T13:29:49Z">
       <class name="com.qa.hubspot.Tests.ContactspageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.hubspot.Tests.ContactspageTest@26653222]" name="setup" is-config="true" duration-ms="33204" started-at="2019-11-09T12:09:08Z" finished-at="2019-11-09T12:09:41Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.hubspot.Tests.ContactspageTest@6093dd95]" name="setup" is-config="true" duration-ms="33146" started-at="2019-11-13T13:28:23Z" finished-at="2019-11-13T13:28:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyContactspageTitleTest()[pri:1, instance:com.qa.hubspot.Tests.ContactspageTest@26653222]" name="verifyContactspageTitleTest" duration-ms="4024" started-at="2019-11-09T12:09:41Z" finished-at="2019-11-09T12:09:45Z">
+        <test-method status="PASS" signature="verifyContactspageTitleTest()[pri:1, instance:com.qa.hubspot.Tests.ContactspageTest@6093dd95]" name="verifyContactspageTitleTest" duration-ms="30" started-at="2019-11-13T13:28:56Z" finished-at="2019-11-13T13:28:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyContactspageTitleTest -->
-        <test-method status="PASS" signature="createContactsTest()[pri:2, instance:com.qa.hubspot.Tests.ContactspageTest@26653222]" name="createContactsTest" duration-ms="14086" started-at="2019-11-09T12:09:45Z" finished-at="2019-11-09T12:09:59Z">
+        <test-method status="FAIL" signature="createContactsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.qa.hubspot.Tests.ContactspageTest@6093dd95]" name="createContactsTest" duration-ms="29099" started-at="2019-11-13T13:28:58Z" data-provider="getContactsData" finished-at="2019-11-13T13:29:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test25@abc.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Harry1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Leuva1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[MD]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for title to contain "Account Setup | HubSpot". Current title: "Harry1 Leuva1" (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-0E6UBLBC', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Harsh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51037}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 11ba71a8b1268cbb6fe1cece1e3e09b5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain "Account Setup | HubSpot". Current title: "Harry1 Leuva1" (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-0E6UBLBC', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Harsh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51037}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 11ba71a8b1268cbb6fe1cece1e3e09b5
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.hubspot.utils.ElementUtils.waitForTitlePresent(ElementUtils.java:98)
+at com.qa.hubspot.pages.Homepage.<init>(Homepage.java:30)
+at com.qa.hubspot.pages.Contactspage.clickonCreateContract(Contactspage.java:66)
+at com.qa.hubspot.Tests.ContactspageTest.createContactsTest(ContactspageTest.java:61)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactsTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.hubspot.Tests.ContactspageTest@26653222]" name="teardown" is-config="true" duration-ms="1124" started-at="2019-11-09T12:09:59Z" finished-at="2019-11-09T12:10:01Z">
+        <test-method status="FAIL" signature="createContactsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.qa.hubspot.Tests.ContactspageTest@6093dd95]" name="createContactsTest" duration-ms="21134" started-at="2019-11-13T13:29:27Z" data-provider="getContactsData" finished-at="2019-11-13T13:29:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test24@acd.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[fer]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Maje]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //span[text()='Create contact'] (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[text()='Create contact'] (tried for 15 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.hubspot.utils.ElementUtils.WaitForElementPresent(ElementUtils.java:93)
+at com.qa.hubspot.pages.Contactspage.clickonCreateContract(Contactspage.java:48)
+at com.qa.hubspot.Tests.ContactspageTest.createContactsTest(ContactspageTest.java:61)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Create contact']"}
+  (Session info: chrome=78.0.3904.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-0E6UBLBC', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Harsh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51037}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 11ba71a8b1268cbb6fe1cece1e3e09b5
+*** Element info: {Using=xpath, value=//span[text()='Create contact']}
+at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactsTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.hubspot.Tests.ContactspageTest@6093dd95]" name="teardown" is-config="true" duration-ms="1057" started-at="2019-11-13T13:29:48Z" finished-at="2019-11-13T13:29:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import com.qa.hubspot.base.Basepage;
 import com.qa.hubspot.pages.Loginpage;
+import com.qa.hubspot.utils.Constants;
 
 public class LoginpageTest {
 
@@ -31,16 +32,24 @@ public class LoginpageTest {
 		loginpage = new Loginpage(driver);
 
 	}
-	
-	@Test (priority=2)
+
+	@Test(priority = 3)
 	public void doLoginTest() throws InterruptedException {
 		loginpage.dologin(prop.getProperty("user"), prop.getProperty("password"));
 	}
-	
-	@Test(priority=1)
+
+	@Test(priority = 1)
 	public void verifyPageTitleTest() {
-		String title=loginpage.getpageTitle();
-		Assert.assertEquals(title, "HubSpot Login");
+		String title = loginpage.getpageTitle();
+		Assert.assertEquals(title, Constants.Login_Page_Title);
+	}
+
+	@Test(priority = 2)
+	public void verifyAccountExistanceTest() {
+		Assert.assertTrue(loginpage.isAccountExist());
+		String Accountchecker = loginpage.verifyTextofNoAccountText();
+		System.out.println("Text of account checker on Loginpage is : " + Accountchecker);
+		Assert.assertEquals(Accountchecker, Constants.Login_Page_ExistingAccount_Check, "Text for existing account check not matching");
 	}
 
 	@AfterTest
